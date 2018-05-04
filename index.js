@@ -6,11 +6,10 @@ const GRID_COLOR = "#CCCCCC";
 const DEAD_COLOR = "#FFFFFF";
 const ALIVE_COLOR = "#000000";
 
-// These must match `Cell::Alive` and `Cell::Dead` in `src/lib.rs`.
 const DEAD = 0;
 const ALIVE = 1;
 
-const universe = Universe.new(32, 32);
+const universe = Universe.new(64, 64);
 const width = universe.width();
 const height = universe.height();
 
@@ -50,12 +49,8 @@ const fps = new class {
 
         // Render the statistics.
         this.fps.textContent = `
-  Frames per Second:
-           latest = ${Math.round(fps)}
-  avg of last 100 = ${Math.round(mean)}
-  min of last 100 = ${Math.round(min)}
-  max of last 100 = ${Math.round(max)}
-  `.trim();
+          ${Math.round(mean)}fps
+        `.trim();
     }
 }();
 

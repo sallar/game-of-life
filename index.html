@@ -9,16 +9,35 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
+        }
+
+        .main, .toolbar {
+            display: flex;
+        }
+
+        .main {
             align-items: center;
             justify-content: center;
+            flex: 1;
+        }
+
+        .toolbar {
+            align-items: center;
+            padding: 0 1rem;
+            justify-content: space-between;
         }
     </style>
 </head>
 
 <body>
-    <pre id="fps"></pre>
-    <canvas id="game-of-life-canvas"></canvas>
-    <button id="play-pause"></button>
+    <section class="main">
+        <canvas id="game-of-life-canvas"></canvas>
+    </section>
+    <footer class="toolbar">
+        <button id="play-pause"></button>
+        <pre id="fps"></pre>
+    </footer>
     <script src="bootstrap.js"></script>
 </body>
 
