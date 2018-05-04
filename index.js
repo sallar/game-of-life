@@ -10,7 +10,7 @@ const ALIVE_COLOR = "#000000";
 const DEAD = 0;
 const ALIVE = 1;
 
-const universe = Universe.new();
+const universe = Universe.new(32, 32);
 const width = universe.width();
 const height = universe.height();
 

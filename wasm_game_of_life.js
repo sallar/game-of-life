@@ -71,8 +71,8 @@ export class Universe {
         tick() {
     return wasm.universe_tick(this.ptr);
 }
-static new() {
-    return Universe.__construct(wasm.universe_new());
+static new(arg0, arg1) {
+    return Universe.__construct(wasm.universe_new(arg0, arg1));
 }
 width() {
     return wasm.universe_width(this.ptr);
